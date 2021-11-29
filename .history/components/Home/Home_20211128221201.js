@@ -2,7 +2,7 @@ import React from 'react';
 import {Image, StyleSheet, Text, View, ScrollView} from 'react-native';
 import Swiper from 'react-native-swiper';
 import {DataList, dataSale} from '../../Data/Data';
-import {ProductItem, FeatureItem} from './ProductItem';
+import {ProductItem} from './ProductItem';
 
 const dataBanner = [
   {
@@ -137,17 +137,10 @@ const Home = () => {
                   dataSale.length > 0 &&
                   dataSale.map((item, index) => (
                     <>
-                      <FeatureItem
-                        key={item.id}
+                      <ProductItem
                         image={item.image}
                         title={item.title}
                         price={item.price}
-                        salePrice={
-                          item.salePrice
-                            ? `Sale ${item.salePrice}`
-                            : `Discount ${Math.floor(Math.random(20) * 30)}`
-                          // : `Discount ${Math.floor(Math.random(20) * 30)}`
-                        }
                       />
                     </>
                   ))}

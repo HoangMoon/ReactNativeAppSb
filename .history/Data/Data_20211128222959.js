@@ -79,15 +79,7 @@ export const dataSale = [
     id: '5',
     title: 'Caramel',
     name: 'Caramel Frappuccino',
-    image: require('../assets/images/p13.jpeg'),
-    price: 90,
-  },
-  {
-    id: '5',
-    title: 'Caramel',
-    name: 'Caramel Frappuccino',
     image: require('../assets/images/p14.jpeg'),
     price: 90,
-    salePrice: '20%',
   },
 ];

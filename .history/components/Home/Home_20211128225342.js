@@ -143,11 +143,9 @@ const Home = () => {
                         title={item.title}
                         price={item.price}
                         salePrice={
-                          item.salePrice
-                            ? `Sale ${item.salePrice}`
-                            : `Discount ${Math.floor(Math.random(20) * 30)}`
-                          // : `Discount ${Math.floor(Math.random(20) * 30)}`
+                          item.salePrice ? `Sale ${item.salePrice}` : ''
                         }
+                        sale={!item.price ? (backgroundColor = '#fff') : ''}
                       />
                     </>
                   ))}

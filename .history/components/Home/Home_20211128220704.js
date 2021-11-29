@@ -1,8 +1,8 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View, ScrollView} from 'react-native';
 import Swiper from 'react-native-swiper';
-import {DataList, dataSale} from '../../Data/Data';
-import {ProductItem, FeatureItem} from './ProductItem';
+import {DataList, dataSale} from '../../Data/Data
+import ProductItem from "./ProductItem"
 
 const dataBanner = [
   {
@@ -129,29 +129,19 @@ const Home = () => {
                     </>
                   ))}
               </View>
-            </View>
-            <View style={styles.homeProduct}>
-              <Text style={styles.bannerTitle}>Feature Product</Text>
-              <View style={styles.productList}>
-                {dataSale &&
-                  dataSale.length > 0 &&
-                  dataSale.map((item, index) => (
+              {/* <View style={styles.productList}>
+                {DataList &&
+                  DataList.length > 0 &&
+                  DataList.map((item, index) => (
                     <>
-                      <FeatureItem
-                        key={item.id}
-                        image={item.image}
-                        title={item.title}
-                        price={item.price}
-                        salePrice={
-                          item.salePrice
-                            ? `Sale ${item.salePrice}`
-                            : `Discount ${Math.floor(Math.random(20) * 30)}`
-                          // : `Discount ${Math.floor(Math.random(20) * 30)}`
-                        }
-                      />
+                      <View style={styles.productItem} key={item.id}>
+                        <Image style={styles.productImg} source={item.image} />
+                        <Text style={styles.productName}>{item.title}</Text>
+                        <Text style={styles.productPrice}>{item.price}$</Text>
+                      </View>
                     </>
                   ))}
-              </View>
+              </View> */}
             </View>
           </View>
         </View>
@@ -248,11 +238,6 @@ const styles = StyleSheet.create({
     marginTop: 5,
     fontSize: 14,
     textAlign: 'center',
-  },
-  productList: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
   },
 });
 

@@ -138,16 +138,10 @@ const Home = () => {
                   dataSale.map((item, index) => (
                     <>
                       <FeatureItem
-                        key={item.id}
                         image={item.image}
                         title={item.title}
                         price={item.price}
-                        salePrice={
-                          item.salePrice
-                            ? `Sale ${item.salePrice}`
-                            : `Discount ${Math.floor(Math.random(20) * 30)}`
-                          // : `Discount ${Math.floor(Math.random(20) * 30)}`
-                        }
+                        salePrice={item.salePrice ? item.salePrice : ''}
                       />
                     </>
                   ))}

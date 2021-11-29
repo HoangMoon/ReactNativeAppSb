@@ -145,7 +145,7 @@ const Home = () => {
                         salePrice={
                           item.salePrice
                             ? `Sale ${item.salePrice}`
-                            : `Discount ${Math.floor(Math.random(20) * 30)}`
+                            : `${Math.floor(Math.random(20) * 30)}`
                           // : `Discount ${Math.floor(Math.random(20) * 30)}`
                         }
                       />
