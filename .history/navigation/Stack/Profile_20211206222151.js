@@ -121,20 +121,6 @@ const Profile = () => {
               </View>
               <Icon style={styles.iconFunc} name="chevron-right" />
             </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
           </View>
         </View>
       </ScrollView>
@@ -383,12 +369,6 @@ const styles = StyleSheet.create({
   txtFuncItem: {
     color: '#333',
     marginLeft: 10,
-    fontSize: 16,
-  },
-  FuncItemIcon: {
-    fontSize: 16,
-  },
-  iconFunc: {
     fontSize: 16,
   },
 });

@@ -108,32 +108,11 @@ const Profile = () => {
               </Text>
             </View>
             <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
+              <View style={FuncItem}>
                 <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
+                <Text>Starbucks Rewards</Text>
               </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
+              <Icon style={iconFunc} name="chevron-right" />
             </View>
           </View>
         </View>
@@ -365,31 +344,6 @@ const styles = StyleSheet.create({
   iconUti: {
     fontSize: 23,
     color: '#fff',
-  },
-  //
-  profileFuncList: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-    borderBottomColor: '#ccc',
-    borderBottomWidth: 1,
-    padding: 15,
-  },
-  FuncItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  txtFuncItem: {
-    color: '#333',
-    marginLeft: 10,
-    fontSize: 16,
-  },
-  FuncItemIcon: {
-    fontSize: 16,
-  },
-  iconFunc: {
-    fontSize: 16,
   },
 });
 

@@ -100,42 +100,6 @@ const Profile = () => {
               </View>
             </View>
           </View>
-          <View style={styles.profileFunc}>
-            <View style={styles.profileUti}>
-              <Icon style={styles.iconUti} name="window-maximize" />
-              <Text style={{marginLeft: 10, fontSize: 18, color: '#fff'}}>
-                Tiện ích của tôi
-              </Text>
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-            <View style={styles.profileFuncList}>
-              <View style={styles.FuncItem}>
-                <Icon style={styles.FuncItemIcon} name="money-check" />
-                <Text style={styles.txtFuncItem}>Starbucks Rewards</Text>
-              </View>
-              <Icon style={styles.iconFunc} name="chevron-right" />
-            </View>
-          </View>
         </View>
       </ScrollView>
     </>
@@ -271,8 +235,6 @@ const styles = StyleSheet.create({
     height: 62,
     lineHeight: 64,
     textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
     borderRadius: 100,
   },
   VouncherColor1: {
@@ -299,11 +261,9 @@ const styles = StyleSheet.create({
   },
   //
   profileCart: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    margin: 20,
   },
   profileCartTitle: {
-    marginTop: 20,
     paddingBottom: 10,
     flexDirection: 'row',
     alignItems: 'center',
@@ -320,9 +280,6 @@ const styles = StyleSheet.create({
   //
   ProfileOrder: {
     marginTop: 25,
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 25,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -352,44 +309,6 @@ const styles = StyleSheet.create({
   txtOrder: {
     color: '#333',
     fontSize: 14,
-  },
-  //
-  profileUti: {
-    flexDirection: 'row',
-    alignItems: 'baseline',
-    fontSize: 18,
-    color: '#333',
-    paddingVertical: 15,
-    backgroundColor: '#3CA55C',
-  },
-  iconUti: {
-    fontSize: 23,
-    color: '#fff',
-  },
-  //
-  profileFuncList: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-    borderBottomColor: '#ccc',
-    borderBottomWidth: 1,
-    padding: 15,
-  },
-  FuncItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  txtFuncItem: {
-    color: '#333',
-    marginLeft: 10,
-    fontSize: 16,
-  },
-  FuncItemIcon: {
-    fontSize: 16,
-  },
-  iconFunc: {
-    fontSize: 16,
   },
 });
 

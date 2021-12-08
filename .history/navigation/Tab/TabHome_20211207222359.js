@@ -2,7 +2,6 @@ import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import StackHome from '../Stack/HomeStack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import Profile from '../Stack/Profile';
 import Maps from '../Stack/Maps';
 const Tab = createBottomTabNavigator();
@@ -29,6 +28,28 @@ export default function HomeTab() {
           ),
         }}
       />
+      {/* <Tab.Screen
+        name="Mapdetails"
+        component={StackHome}
+        options={{
+          tabBarLabel: '',
+          tabBarColor: 'red',
+          tabBarIcon: ({color}) => (
+            <MaterialCommunityIcons name="box" color={color} size={35} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={StackHome}
+        options={{
+          tabBarLabel: '',
+          tabBarColor: 'red',
+          tabBarIcon: ({color}) => (
+            <MaterialCommunityIcons name="cart-plus" color={color} size={35} />
+          ),
+        }}
+      /> */}
       <Tab.Screen
         name="Maps"
         component={Maps}
@@ -36,7 +57,11 @@ export default function HomeTab() {
           tabBarLabel: '',
           tabBarColor: 'red',
           tabBarIcon: ({color}) => (
-            <Icon name="map-marker-alt" color={color} size={35} />
+            <MaterialCommunityIcons
+              name="map-marker-alt"
+              color={color}
+              size={35}
+            />
           ),
         }}
       />

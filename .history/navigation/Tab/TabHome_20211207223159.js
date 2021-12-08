@@ -36,7 +36,11 @@ export default function HomeTab() {
           tabBarLabel: '',
           tabBarColor: 'red',
           tabBarIcon: ({color}) => (
-            <Icon name="map-marker-alt" color={color} size={35} />
+            <MaterialCommunityIcons
+              name="map-marker-alt"
+              color={color}
+              size={35}
+            />
           ),
         }}
       />
