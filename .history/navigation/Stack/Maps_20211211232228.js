@@ -54,9 +54,9 @@ const Maps = () => {
             <Icon style={Styles.pointer} name="star"></Icon>
           </View>
           <View style={Styles.status}>
-            <Text style={Styles.StatusText}> Openning </Text>
+            <Text style={Styles.MarkerText}> Openning </Text>
             <Text style={Styles.MarkerText}>.</Text>
-            <Text style={Styles.StatusText2}>Close at 22.00 pm</Text>
+            <Text style={Styles.MarkerText}>Close at 22.00 pm</Text>
           </View>
         </View>
       </View>
@@ -102,15 +102,6 @@ const Styles = StyleSheet.create({
     paddingBottom: 5,
     color: '#2BC411',
   },
-  StatusText2: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
-    color: '#CCD5F3',
-  },
-
   MarkerImage: {
     width: 150,
     height: 150,

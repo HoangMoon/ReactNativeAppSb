@@ -12,6 +12,8 @@ import {
   ScrollView,
 } from 'react-native';
 
+
+
 const {width} = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/FontAwesome5';
 const Cart = () => {
@@ -25,6 +27,8 @@ const Cart = () => {
     setCount(count => count + 1);
   };
 
+  
+  };
   return (
     <ScrollView>
       <View style={{backgroundColor: '#fff', flex: 1}}>
@@ -39,36 +43,36 @@ const Cart = () => {
             <View style={{width: 20}} />
           </View>
         </SafeAreaView>
+        
+          <View style={styles.Item}>
+            <View>
+              <Image
+                style={styles.ItemImage}
+                source={require('../../assets/images/p6.png')}
+              />
+            </View>
 
-        <View style={styles.Item}>
-          <View>
-            <Image
-              style={styles.ItemImage}
-              source={require('../../assets/images/p6.png')}
-            />
-          </View>
+            <View style={{width: width / 2, justifyContent: 'flex-start'}}>
+              <Text style={styles.ItemTitle}>Caramel Frapuchino</Text>
 
-          <View style={{width: width / 2, justifyContent: 'flex-start'}}>
-            <Text style={styles.ItemTitle}>Caramel Frapuchino</Text>
+              <Text style={styles.ItemTitle}> 19.99$ </Text>
 
-            <Text style={styles.ItemTitle}> 19.99$ </Text>
-
-            <View style={styles.add}>
-              <TouchableOpacity
-                style={styles.actionAdd}
-                onPress={e => handleCountMinus(e)}>
-                <Icon style={styles.iconAdd} name="minus" />
-              </TouchableOpacity>
-              <Text style={styles.txtCount}>{count}</Text>
-              <TouchableOpacity
-                style={styles.actionAdd}
-                onPress={e => handleCountPlus(e)}>
-                <Icon style={styles.iconAdd} name="plus" />
-              </TouchableOpacity>
+              <View style={styles.add}>
+                <TouchableOpacity
+                  style={styles.actionAdd}
+                  onPress={e => handleCountMinus(e)}>
+                  <Icon style={styles.iconAdd} name="minus" />
+                </TouchableOpacity>
+                <Text style={styles.txtCount}>{count}</Text>
+                <TouchableOpacity
+                  style={styles.actionAdd}
+                  onPress={e => handleCountPlus(e)}>
+                  <Icon style={styles.iconAdd} name="plus" />
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
-
+      
         <View style={styles.bottomAC}>
           <View>
             <Text style={styles.TotalText}>Total Price</Text>
@@ -128,7 +132,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#FFD8CA',
+    backgroundColor: '#ccc',
     marginHorizontal: 20,
     borderRadius: 10,
     // width: width / 2,
@@ -139,7 +143,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   ItemTitle: {
-    fontWeight: 'bold',
+    fontWeight: 'Bold',
     color: '#555',
     fontSize: 23,
     marginBottom: 5,

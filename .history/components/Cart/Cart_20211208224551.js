@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#FFD8CA',
+    backgroundColor: '#ccc',
     marginHorizontal: 20,
     borderRadius: 10,
     // width: width / 2,
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
   Odb: {
     backgroundColor: '#1d724d',
     paddingHorizontal: 20,
-    borderColor: '#d2d2d1',
+    borderColor: '#FFA39F',
     borderWidth: 1,
     borderRadius: 10,
     height: 40,
