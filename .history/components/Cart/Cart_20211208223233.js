@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#FFD8CA',
+    backgroundColor: '#ccc',
     marginHorizontal: 20,
     borderRadius: 10,
     // width: width / 2,
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   ItemTitle: {
-    fontWeight: 'bold',
+    fontWeight: 'Bold',
     color: '#555',
     fontSize: 23,
     marginBottom: 5,

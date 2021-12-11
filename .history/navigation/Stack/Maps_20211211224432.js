@@ -6,7 +6,6 @@ import {
   Text,
   StyleSheet,
   TextInput,
-  ScrollView,
 } from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker, Callout} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -35,7 +34,6 @@ const Maps = () => {
           </Callout>
         </Marker>
       </MapView>
-
       <Image
         source={require('../../assets/images/ShopPic.jpg')}
         style={Styles.ImageMap}
@@ -43,7 +41,6 @@ const Maps = () => {
       <View style={Styles.DetailsImgMap}>
         <View style={Styles.VoteDetail}>
           <View style={Styles.VoteAddress}>
-            <Icon style={Styles.AddIcon} name="map-marker-alt"></Icon>
             <Text style={Styles.MarkerText}>34/Wall.St</Text>
           </View>
           <View style={Styles.VotePoint}>
@@ -54,13 +51,12 @@ const Maps = () => {
             <Icon style={Styles.pointer} name="star"></Icon>
           </View>
           <View style={Styles.status}>
-            <Text style={Styles.StatusText}> Openning </Text>
-            <Text style={Styles.MarkerText}>.</Text>
-            <Text style={Styles.StatusText2}>Close at 22.00 pm</Text>
+            <Text> Openning </Text>
+            <Text>.</Text>
+            <Text>Close at 22.00 pm</Text>
           </View>
         </View>
       </View>
-
       <View style={Styles.search}>
         <View style={Styles.search1}>
           <Image source={require('../../assets/images/1.png')} />
@@ -82,8 +78,7 @@ const Styles = StyleSheet.create({
     position: 'absolute',
     // resizeMode: 'contain',
     bottom: 100,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
+    borderRadius: 30,
     borderColor: '#CCCCCC',
     borderWidth: 1,
   },
@@ -91,42 +86,18 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 16,
     textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
   },
-  StatusText: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
-    color: '#2BC411',
-  },
-  StatusText2: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
-    color: '#CCD5F3',
-  },
-
   MarkerImage: {
     width: 150,
     height: 150,
   },
   DetailsImgMap: {
     width: '100%',
-    height: 120,
+    height: 100,
     backgroundColor: '#fff',
     borderColor: '#CCCCCC',
     borderWidth: 0.4,
     borderRadius: 5,
-  },
-  AddIcon: {
-    fontSize: 20,
-    marginRight: 10,
-    color: 'red',
   },
   VoteDetail: {
     width: '100%',
@@ -139,27 +110,18 @@ const Styles = StyleSheet.create({
     fontSize: 16,
     fontStyle: 'italic',
     fontWeight: 'bold',
-    flexDirection: 'row',
-    justifyContent: 'center',
   },
   VotePoint: {
     flexDirection: 'row',
     padding: 10,
-    letterSpacing: 20,
-    justifyContent: 'center',
+    letterSpacing: 2,
   },
   pointer: {
-    fontSize: 15,
+    width: 10,
+    height: 10,
     color: '#FAF746',
-    letterSpacing: 7,
-    alignItems: 'center',
   },
-  status: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 50,
-  },
+  status: {},
   search: {
     height: 48,
     width: '85%',

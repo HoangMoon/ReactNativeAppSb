@@ -12,6 +12,8 @@ import {
   ScrollView,
 } from 'react-native';
 
+// import {Swipeable} from 'react-native-gesture-handler';
+
 const {width} = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/FontAwesome5';
 const Cart = () => {
@@ -25,6 +27,15 @@ const Cart = () => {
     setCount(count => count + 1);
   };
 
+  const RenderRight = ({progress}) => {
+    return (
+      <TouchableOpacity>
+        <View style={styles.rightAC}>
+          <Icon name="trash-alt" size={30} style={{color: '#036637'}} />
+        </View>
+      </TouchableOpacity>
+    );
+  };
   return (
     <ScrollView>
       <View style={{backgroundColor: '#fff', flex: 1}}>
@@ -39,7 +50,9 @@ const Cart = () => {
             <View style={{width: 20}} />
           </View>
         </SafeAreaView>
-
+        {/* <Swipeable */}
+        renderRightActions={({progress}) => <RenderRight progress={progress} />}
+        >
         <View style={styles.Item}>
           <View>
             <Image
@@ -68,7 +81,7 @@ const Cart = () => {
             </View>
           </View>
         </View>
-
+        {/* </Swipeable> */}
         <View style={styles.bottomAC}>
           <View>
             <Text style={styles.TotalText}>Total Price</Text>
@@ -128,7 +141,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#FFD8CA',
+    backgroundColor: '#ccc',
     marginHorizontal: 20,
     borderRadius: 10,
     // width: width / 2,
@@ -139,7 +152,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   ItemTitle: {
-    fontWeight: 'bold',
+    fontWeight: 'Bold',
     color: '#555',
     fontSize: 23,
     marginBottom: 5,

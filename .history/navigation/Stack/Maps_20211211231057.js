@@ -19,55 +19,56 @@ const Maps = () => {
   };
 
   return (
-    <View style={{flex: 1, backgroundColor: 'red'}}>
-      <MapView
-        style={Styles.container}
-        provider={PROVIDER_GOOGLE}
-        initialRegion={initialRegion}>
-        <Marker
-          coordinate={{
-            latitude: 21.04639947170033,
-            longitude: 105.78491492015995,
-          }}>
-          <Callout>
-            <Image style={Styles.MarkerImage} />
-            <Text style={Styles.MarkerText}>StarBuck Coffee Shop </Text>
-          </Callout>
-        </Marker>
-      </MapView>
-
-      <Image
-        source={require('../../assets/images/ShopPic.jpg')}
-        style={Styles.ImageMap}
-      />
-      <View style={Styles.DetailsImgMap}>
-        <View style={Styles.VoteDetail}>
-          <View style={Styles.VoteAddress}>
-            <Icon style={Styles.AddIcon} name="map-marker-alt"></Icon>
-            <Text style={Styles.MarkerText}>34/Wall.St</Text>
+    
+      <View style={{flex: 1, backgroundColor: 'red'}}>
+        <MapView
+          style={Styles.container}
+          provider={PROVIDER_GOOGLE}
+          initialRegion={initialRegion}>
+          <Marker
+            coordinate={{
+              latitude: 21.04639947170033,
+              longitude: 105.78491492015995,
+            }}>
+            <Callout>
+              <Image style={Styles.MarkerImage} />
+              <Text style={Styles.MarkerText}>StarBuck Coffee Shop </Text>
+            </Callout>
+          </Marker>
+        </MapView>
+        <ScrollView></ScrollView>
+        <Image
+          source={require('../../assets/images/ShopPic.jpg')}
+          style={Styles.ImageMap}
+        />
+        <View style={Styles.DetailsImgMap}>
+          <View style={Styles.VoteDetail}>
+            <View style={Styles.VoteAddress}>
+              <Icon style={Styles.AddIcon} name="map-marker-alt"></Icon>
+              <Text style={Styles.MarkerText}>34/Wall.St</Text>
+            </View>
+            <View style={Styles.VotePoint}>
+              <Icon style={Styles.pointer} name="star"></Icon>
+              <Icon style={Styles.pointer} name="star"></Icon>
+              <Icon style={Styles.pointer} name="star"></Icon>
+              <Icon style={Styles.pointer} name="star"></Icon>
+              <Icon style={Styles.pointer} name="star"></Icon>
+            </View>
+            <View style={Styles.status}>
+              <Text style={Styles.MarkerText}> Openning </Text>
+              <Text style={Styles.MarkerText}>.</Text>
+              <Text style={Styles.MarkerText}>Close at 22.00 pm</Text>
+            </View>
           </View>
-          <View style={Styles.VotePoint}>
-            <Icon style={Styles.pointer} name="star"></Icon>
-            <Icon style={Styles.pointer} name="star"></Icon>
-            <Icon style={Styles.pointer} name="star"></Icon>
-            <Icon style={Styles.pointer} name="star"></Icon>
-            <Icon style={Styles.pointer} name="star"></Icon>
-          </View>
-          <View style={Styles.status}>
-            <Text style={Styles.StatusText}> Openning </Text>
-            <Text style={Styles.MarkerText}>.</Text>
-            <Text style={Styles.StatusText2}>Close at 22.00 pm</Text>
+        </View>
+        <View style={Styles.search}>
+          <View style={Styles.search1}>
+            <Image source={require('../../assets/images/1.png')} />
+            <TextInput style={Styles.input} placeholder="Search" />
           </View>
         </View>
       </View>
-
-      <View style={Styles.search}>
-        <View style={Styles.search1}>
-          <Image source={require('../../assets/images/1.png')} />
-          <TextInput style={Styles.input} placeholder="Search" />
-        </View>
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 // 21.04639947170033, 105.78491492015995
@@ -82,8 +83,7 @@ const Styles = StyleSheet.create({
     position: 'absolute',
     // resizeMode: 'contain',
     bottom: 100,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
+    borderRadius: 30,
     borderColor: '#CCCCCC',
     borderWidth: 1,
   },
@@ -94,30 +94,13 @@ const Styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 5,
   },
-  StatusText: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
-    color: '#2BC411',
-  },
-  StatusText2: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    textAlign: 'center',
-    paddingTop: 10,
-    paddingBottom: 5,
-    color: '#CCD5F3',
-  },
-
   MarkerImage: {
     width: 150,
     height: 150,
   },
   DetailsImgMap: {
     width: '100%',
-    height: 120,
+    height: 100,
     backgroundColor: '#fff',
     borderColor: '#CCCCCC',
     borderWidth: 0.4,
@@ -158,7 +141,7 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 50,
+    marginBottom: 100,
   },
   search: {
     height: 48,
