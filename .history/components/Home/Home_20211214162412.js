@@ -7,19 +7,15 @@ import {
   ScrollView,
   TextInput,
   TouchableOpacity,
-  Pressable,
+  Modal,
 } from 'react-native';
 // import Svg, {Use, Image} from 'react-native-svg';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import Icon2 from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon3 from 'react-native-vector-icons/Entypo';
 
-import Modal from 'react-native-modal';
 import Swiper from 'react-native-swiper';
 import {DataList, dataSale} from '../../Data/Data';
 import {ProductItem, FeatureItem} from './ProductItem';
-
 import Hoang from '../Modal/Modal';
 import HomeModal from '../Modal/Modal';
 import Countdown from '../Countdown/Countdown';
@@ -52,7 +48,6 @@ const Home = ({navigation}) => {
   const handeActive = item => {
     setFoodActive(item);
   };
-  const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <ScrollView>
@@ -68,59 +63,39 @@ const Home = ({navigation}) => {
                 style={styles.homeLogo}
                 source={require('../../assets/images/logo1.png')}
               />
-              <TouchableOpacity onPress={() => setModalVisible(true)}>
+              <TouchableOpacity onPress={() => handleBarMenu()}>
                 <Image
                   style={styles.homeBar}
                   source={require('../../assets/images/bar.png')}
                 />
               </TouchableOpacity>
-              <Modal
-                style={styles.modalViewBar}
-                animationIn="slideInRight"
-                animationOut={'slideOutLeft'}
-                transparent={true}
-                transparent={true}
-                isVisible={modalVisible}
-                hasBackdrop={true}
-                backdropTransitionInTiming={400}
-                backdropOpacity={0.9}
-                backdropColor="black"
-                onRequestClose={() => {
-                  Alert.alert('Modal has been closed.');
-                  setModalVisible(!modalVisible);
-                }}>
-                <View style={styles.centeredView}>
-                  <View style={styles.modalView}>
-                    <View style={styles.modalBar}>
-                      <Icon style={styles.iconBar} name="home" />
-                      <Text style={styles.txtBar}>Home</Text>
+              <View style={styles.modalProduct}>
+                <Modal
+                  animationType="slide"
+                  transparent={true}
+                  visible={modalVisible}
+                  hasBackdrop={true}
+                  backdropTransitionInTiming={300}
+                  backdropOpacity={0.9}
+                  backdropColor="black"
+                  onRequestClose={() => {
+                    Alert.alert('Modal has been closed.');
+                    setModalVisible(!modalVisible);
+                  }}>
+                  <View style={styles.centeredView}>
+                    <View style={styles.modalView}>
+                      <Text>hello word</Text>
+                      <Pressable
+                        style={[styles.btnModal, styles.buttonClose]}
+                        onPress={() => setModalVisible(!modalVisible)}>
+                        <Text style={styles.closeModal}>
+                          <Icon1 name="times" style={styles.iconTimes} />
+                        </Text>
+                      </Pressable>
                     </View>
-                    <View style={styles.modalBar}>
-                      <Icon1 style={styles.iconBar} name="contacts" />
-                      <Text style={styles.txtBar}>Liên hệ</Text>
-                    </View>
-                    <View style={styles.modalBar}>
-                      <Icon2 style={styles.iconBar} name="support" />
-                      <Text style={styles.txtBar}>Trợ giúp</Text>
-                    </View>
-                    <View style={styles.modalBar}>
-                      <Icon style={styles.iconBar} name="info-circle" />
-                      <Text style={styles.txtBar}>Thông tin</Text>
-                    </View>
-                    <View style={styles.modalBar}>
-                      <Icon3 style={styles.iconBar} name="log-out" />
-                      <Text style={styles.txtBar}>Đăng xuất</Text>
-                    </View>
-                    <Pressable
-                      style={[styles.btnModal, styles.buttonClose]}
-                      onPress={() => setModalVisible(!modalVisible)}>
-                      <Text style={styles.closeModal}>
-                        <Icon2 name="times" style={styles.iconTimes} />
-                      </Text>
-                    </Pressable>
                   </View>
-                </View>
-              </Modal>
+                </Modal>
+              </View>
             </View>
             <View style={styles.homeAvatar}>
               <View style={styles.avtarTxt}>
@@ -356,7 +331,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 10,
-    position: 'relative',
   },
   homeAvatar: {
     marginTop: 25,
@@ -507,42 +481,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  // Modal
-  modalViewBar: {
-    position: 'relative',
-  },
-  modalBar: {
-    marginBottom: 25,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  txtBar: {
-    fontSize: 25,
-    color: '#fff',
-    fontWeight: '500',
-    marginLeft: 10,
-  },
-  buttonClose: {
-    position: 'absolute',
-    top: -180,
-    right: 10,
-  },
-  closeModal: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'red',
-    lineHeight: 38,
-    textAlign: 'center',
-    borderRadius: 100,
-  },
-  iconTimes: {
-    fontSize: 25,
-    color: '#fff',
-  },
-  iconBar: {
-    color: '#00623B',
-    fontSize: 30,
   },
 });
 

@@ -28,12 +28,11 @@ const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (email === 'hoang0508' && password === '123') {
-      Alert.alert('Đăng nhập thành công!');
+    if (email === 'hoang0508@gmail.com' && password === 123) {
+      Alert('Đăng nhập tài khoản thành công!');
       navigation.navigate('HomeTab');
     } else {
-      // Alert('Đăng nhập tài khoản thất bại!');
-      Alert.alert('Đăng nhập thất bại');
+      Alert('Đăng nhập tài khoản thất bại!');
     }
   };
   return (
@@ -68,13 +67,15 @@ const Login = ({navigation}) => {
         <View style={styles.formLogin}>
           <TextInput
             style={styles.input}
-            onChangeText={val => setEmail(val)}
+            value={text}
+            onChangeText={() => setEmail()}
             placeholder="Email"
           />
           <View style={styles.inputPassEye}>
             <TextInput
               style={styles.input}
-              onChangeText={val => setPassword(val)}
+              value={text}
+              onChangeText={() => setPassword()}
               placeholder="Password"
               style={{width: '80%', fontSize: 20}}
             />
@@ -98,9 +99,11 @@ const Login = ({navigation}) => {
             </Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.btnLogin} onPress={handleLogin}>
+        <TouchableHighlight
+          style={styles.btnLogin}
+          onPress={() => handleLogin()}>
           <Text style={styles.txtBtnLogin}>Login</Text>
-        </TouchableOpacity>
+        </TouchableHighlight>
         <View style={styles.lineText}>
           <Image source={require('../../assets/images/Line.png')} />
           <Text style={styles.txtLine}>Or</Text>

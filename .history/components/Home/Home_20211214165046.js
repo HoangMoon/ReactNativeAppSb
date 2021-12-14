@@ -13,8 +13,6 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon2 from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon3 from 'react-native-vector-icons/Entypo';
-
 import Modal from 'react-native-modal';
 import Swiper from 'react-native-swiper';
 import {DataList, dataSale} from '../../Data/Data';
@@ -82,7 +80,7 @@ const Home = ({navigation}) => {
                 transparent={true}
                 isVisible={modalVisible}
                 hasBackdrop={true}
-                backdropTransitionInTiming={400}
+                backdropTransitionInTiming={300}
                 backdropOpacity={0.9}
                 backdropColor="black"
                 onRequestClose={() => {
@@ -92,24 +90,24 @@ const Home = ({navigation}) => {
                 <View style={styles.centeredView}>
                   <View style={styles.modalView}>
                     <View style={styles.modalBar}>
-                      <Icon style={styles.iconBar} name="home" />
                       <Text style={styles.txtBar}>Home</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon1 style={styles.iconBar} name="contacts" />
                       <Text style={styles.txtBar}>Liên hệ</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon2 style={styles.iconBar} name="support" />
                       <Text style={styles.txtBar}>Trợ giúp</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon style={styles.iconBar} name="info-circle" />
                       <Text style={styles.txtBar}>Thông tin</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon3 style={styles.iconBar} name="log-out" />
                       <Text style={styles.txtBar}>Đăng xuất</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <Pressable
                       style={[styles.btnModal, styles.buttonClose]}
@@ -356,7 +354,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 10,
-    position: 'relative',
   },
   homeAvatar: {
     marginTop: 25,
@@ -513,36 +510,17 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   modalBar: {
-    marginBottom: 25,
-    flexDirection: 'row',
-    alignItems: 'center',
+    marginBottom: 20,
   },
   txtBar: {
-    fontSize: 25,
+    fontSize: 30,
     color: '#fff',
-    fontWeight: '500',
-    marginLeft: 10,
-  },
-  buttonClose: {
-    position: 'absolute',
-    top: -180,
-    right: 10,
-  },
-  closeModal: {
-    width: 40,
-    height: 40,
-    backgroundColor: 'red',
-    lineHeight: 38,
-    textAlign: 'center',
-    borderRadius: 100,
   },
   iconTimes: {
-    fontSize: 25,
-    color: '#fff',
-  },
-  iconBar: {
-    color: '#00623B',
-    fontSize: 30,
+    position: 'absolute',
+    top: 10,
+    right: 10,
+    fontSize: 20,
   },
 });
 

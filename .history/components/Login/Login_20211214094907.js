@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import {
   SafeAreaView,
   ScrollView,
@@ -20,22 +20,9 @@ import {
   Button,
   TouchableHighlight,
   TouchableOpacity,
-  Alert,
 } from 'react-native';
 const Login = ({navigation}) => {
   // const [checked, setChecked] = useState('first');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = () => {
-    if (email === 'hoang0508' && password === '123') {
-      Alert.alert('Đăng nhập thành công!');
-      navigation.navigate('HomeTab');
-    } else {
-      // Alert('Đăng nhập tài khoản thất bại!');
-      Alert.alert('Đăng nhập thất bại');
-    }
-  };
   return (
     <View style={{backgroundColor: '#fff'}}>
       <ScrollView>
@@ -66,20 +53,8 @@ const Login = ({navigation}) => {
           <Image source={require('../../assets/images/banner2.png')} />
         </View>
         <View style={styles.formLogin}>
-          <TextInput
-            style={styles.input}
-            onChangeText={val => setEmail(val)}
-            placeholder="Email"
-          />
-          <View style={styles.inputPassEye}>
-            <TextInput
-              style={styles.input}
-              onChangeText={val => setPassword(val)}
-              placeholder="Password"
-              style={{width: '80%', fontSize: 20}}
-            />
-            <Icon name="eye" size={20} />
-          </View>
+          <TextInput style={styles.input} value={text} placeholder="Email" />
+          <TextInput style={styles.input} value={text} placeholder="Password" />
         </View>
         <View style={styles.fogotLogin}>
           {/* <RadioButton /> */}
@@ -98,9 +73,11 @@ const Login = ({navigation}) => {
             </Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.btnLogin} onPress={handleLogin}>
+        <TouchableHighlight
+          style={styles.btnLogin}
+          onPress={() => navigation.navigate('HomeTab')}>
           <Text style={styles.txtBtnLogin}>Login</Text>
-        </TouchableOpacity>
+        </TouchableHighlight>
         <View style={styles.lineText}>
           <Image source={require('../../assets/images/Line.png')} />
           <Text style={styles.txtLine}>Or</Text>
@@ -180,7 +157,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
     marginBottom: 10,
-    fontSize: 20,
+    fontSize: 18,
   },
   fogotLogin: {
     margin: 20,
@@ -245,12 +222,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 5,
     color: '#00623B',
-  },
-  inputPassEye: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottomWidth: 1,
   },
 });
 

@@ -28,8 +28,8 @@ const Login = ({navigation}) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (email === 'hoang0508' && password === '123') {
-      Alert.alert('Đăng nhập thành công!');
+    if (email === 'hoang0508@gmail.com' && password === 123) {
+      // Alert('Đăng nhập tài khoản thành công!');
       navigation.navigate('HomeTab');
     } else {
       // Alert('Đăng nhập tài khoản thất bại!');
@@ -68,13 +68,13 @@ const Login = ({navigation}) => {
         <View style={styles.formLogin}>
           <TextInput
             style={styles.input}
-            onChangeText={val => setEmail(val)}
+            onChangeText={() => setEmail()}
             placeholder="Email"
           />
           <View style={styles.inputPassEye}>
             <TextInput
               style={styles.input}
-              onChangeText={val => setPassword(val)}
+              onChangeText={() => setPassword()}
               placeholder="Password"
               style={{width: '80%', fontSize: 20}}
             />

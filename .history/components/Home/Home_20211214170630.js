@@ -13,8 +13,6 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon2 from 'react-native-vector-icons/FontAwesome';
 import Icon1 from 'react-native-vector-icons/MaterialCommunityIcons';
-import Icon3 from 'react-native-vector-icons/Entypo';
-
 import Modal from 'react-native-modal';
 import Swiper from 'react-native-swiper';
 import {DataList, dataSale} from '../../Data/Data';
@@ -100,16 +98,16 @@ const Home = ({navigation}) => {
                       <Text style={styles.txtBar}>Liên hệ</Text>
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon2 style={styles.iconBar} name="support" />
                       <Text style={styles.txtBar}>Trợ giúp</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon style={styles.iconBar} name="info-circle" />
                       <Text style={styles.txtBar}>Thông tin</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <View style={styles.modalBar}>
-                      <Icon3 style={styles.iconBar} name="log-out" />
                       <Text style={styles.txtBar}>Đăng xuất</Text>
+                      <Icon1 style={styles.iconBar} name="home" />
                     </View>
                     <Pressable
                       style={[styles.btnModal, styles.buttonClose]}
@@ -513,7 +511,7 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   modalBar: {
-    marginBottom: 25,
+    marginBottom: 20,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -541,7 +539,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   iconBar: {
-    color: '#00623B',
+    color: '#fff',
     fontSize: 30,
   },
 });
