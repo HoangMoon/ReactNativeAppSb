@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
   },
   ctPrice: {
     color: '#fff',
-    fontSize: 35,
+    fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 10,
     marginTop: 60,

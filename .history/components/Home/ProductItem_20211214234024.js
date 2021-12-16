@@ -20,7 +20,7 @@ const ProductItem = props => {
       <View style={styles.productItem}>
         <Image style={styles.productImg} source={props.image} />
         <Text style={styles.productName}>{props.title}</Text>
-        <Text style={styles.productPrice}>{props.price}.000Vnđ</Text>
+        <Text style={styles.productPrice}>{props.price}$</Text>
         <Text style={styles.productPriceNews}>News</Text>
         <Icon style={styles.iconHeart} name="heart" size={25} color="#ccc" />
         <Pressable
