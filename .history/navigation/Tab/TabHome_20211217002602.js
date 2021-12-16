@@ -31,16 +31,6 @@ export default function HomeTab() {
         }}
       />
       <Tab.Screen
-        name="Dely"
-        component={DelyMap}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({color}) => (
-            <Icon name="shipping-fast" color={color} size={35} />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Maps"
         component={Maps}
         options={{
@@ -54,6 +44,16 @@ export default function HomeTab() {
       <Tab.Screen
         name="profiletab"
         component={Profile}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({color}) => (
+            <MaterialCommunityIcons name="account" color={color} size={35} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Dely"
+        component={DelyMap}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({color}) => (
