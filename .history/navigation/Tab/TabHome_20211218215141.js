@@ -54,6 +54,16 @@ export default function HomeTab() {
         }}
       />
       <Tab.Screen
+        name="profiletab"
+        component={Profile}
+        options={{
+          tabBarLabel: '',
+          tabBarIcon: ({color}) => (
+            <MaterialCommunityIcons name="account" color={color} size={35} />
+          ),
+        }}
+      />
+      <Tab.Screen
         name="Chat"
         component={Chats}
         options={{
@@ -64,16 +74,6 @@ export default function HomeTab() {
               color={color}
               size={35}
             />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="profiletab"
-        component={Profile}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({color}) => (
-            <MaterialCommunityIcons name="account" color={color} size={35} />
           ),
         }}
       />
