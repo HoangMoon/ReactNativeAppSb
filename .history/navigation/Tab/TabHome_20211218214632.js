@@ -3,7 +3,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import StackHome from '../Stack/HomeStack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import Maps from '../Stack/Maps';
 import Profile from '../Stack/Profile/Profile';
 import DelyMap from '../Stack/DelyMap';
@@ -54,22 +53,18 @@ export default function HomeTab() {
         }}
       />
       <Tab.Screen
-        name="Chat"
-        component={Chats}
+        name="profiletab"
+        component={Profile}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({color}) => (
-            <Ionicons
-              name="chatbubble-ellipses-sharp"
-              color={color}
-              size={35}
-            />
+            <MaterialCommunityIcons name="account" color={color} size={35} />
           ),
         }}
       />
       <Tab.Screen
-        name="profiletab"
-        component={Profile}
+        name="Chat"
+        component={Chats}
         options={{
           tabBarLabel: '',
           tabBarIcon: ({color}) => (

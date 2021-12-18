@@ -78,21 +78,15 @@ const Maps = () => {
                 }>
                 <Icon name="facebook-f" style={Styles.iconSocial} />
               </TouchableOpacity>
-              <TouchableOpacity
-                style={[Styles.contactIcon, Styles.contactIconCl2]}
-                onPress={() =>
-                  Linking.openURL('https://www.instagram.com/hoangmoon83/')
-                }>
+              <View style={[Styles.contactIcon, Styles.contactIconCl2]}>
                 <Icon name="instagram" style={Styles.iconSocial} />
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[Styles.contactIcon, Styles.contactIconCl3]}>
+              </View>
+              <View style={[Styles.contactIcon, Styles.contactIconCl3]}>
                 <Icon name="twitter" style={Styles.iconSocial} />
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[Styles.contactIcon, Styles.contactIconCl4]}>
+              </View>
+              <View style={[Styles.contactIcon, Styles.contactIconCl4]}>
                 <Icon2 name="gmail" style={Styles.iconSocial} />
-              </TouchableOpacity>
+              </View>
               <View style={[Styles.contactIcon, Styles.contactIconCl5]}>
                 <Icon name="share-alt" style={Styles.iconSocial} />
               </View>
