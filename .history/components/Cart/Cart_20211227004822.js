@@ -132,7 +132,7 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Icon: {
-    fontSize: 22,
+    fontSize: 222,
     alignItems: 'center',
     color: '#ccc',
   },

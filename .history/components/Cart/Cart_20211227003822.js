@@ -27,11 +27,9 @@ const Cart = ({navigation}) => {
     <View>
       <ScrollView>
         <View style={Styles.Headers}>
-          <TouchableOpacity
-            style={Styles.backBtn}
-            onPress={() => navigation.goBack()}>
+          <View style={Styles.backBtn}>
             <Icon name="angle-left" style={Styles.Icon}></Icon>
-          </TouchableOpacity>
+          </View>
           <View style={Styles.userBtn}>
             <View>
               <FontIcon name="bookmark-o" style={Styles.IconBM}></FontIcon>
@@ -120,11 +118,8 @@ const Styles = StyleSheet.create({
     width: 30,
     height: 30,
     justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
     marginLeft: 20,
-    backgroundColor: '#1d724d',
-    borderRadius: 100,
+    flexDirection: 'row',
   },
   userBtn: {
     justifyContent: 'center',
@@ -132,9 +127,10 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Icon: {
-    fontSize: 22,
+    fontSize: 30,
     alignItems: 'center',
     color: '#ccc',
+    marginRight: 20,
   },
   IcMark: {
     fontSize: 25,

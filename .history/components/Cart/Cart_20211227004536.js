@@ -132,9 +132,10 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Icon: {
-    fontSize: 22,
+    fontSize: 20,
     alignItems: 'center',
     color: '#ccc',
+    marginRight: 20,
   },
   IcMark: {
     fontSize: 25,
