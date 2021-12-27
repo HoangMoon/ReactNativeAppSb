@@ -130,11 +130,11 @@ const Login = ({navigation}) => {
           <Text style={styles.txtBtnLogin}>Google</Text>
         </View>
         <View style={styles.txtAcount}>
-          <Text style={styles.txtDon}>Bạn chưa có tài khoản?</Text>
+          <Text style={styles.txtDon}>Don’t have an account?</Text>
           <Text
             style={styles.txtSignup}
             onPress={() => navigation.navigate('Signup')}>
-            Đăng ký ngay
+            Sign Up
           </Text>
         </View>
       </ScrollView>

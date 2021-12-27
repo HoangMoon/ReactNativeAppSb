@@ -548,19 +548,6 @@ const styles = StyleSheet.create({
   },
   bellMess: {
     position: 'relative',
-    flexDirection: 'row',
-  },
-  bellMessNumber: {
-    width: 23,
-    height: 23,
-    backgroundColor: 'red',
-    borderRadius: 100,
-    color: '#fff',
-    lineHeight: 20,
-    textAlign: 'center',
-    position: 'absolute',
-    right: -10,
-    top: -8,
   },
 });
 

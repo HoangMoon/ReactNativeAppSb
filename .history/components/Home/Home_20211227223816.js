@@ -60,13 +60,10 @@ const Home = ({navigation}) => {
         <View style={styles.homePage}>
           <View style={styles.homeTop}>
             <View style={styles.homeHeader}>
-              <View style={styles.bellMess}>
-                <Image
-                  style={styles.homeBell}
-                  source={require('../../assets/images/bell.png')}
-                />
-                <Text style={styles.bellMessNumber}>3</Text>
-              </View>
+              <Image
+                style={styles.homeBell}
+                source={require('../../assets/images/bell.png')}
+              />
               <Image
                 style={styles.homeLogo}
                 source={require('../../assets/images/logo1.png')}
@@ -273,9 +270,10 @@ const Home = ({navigation}) => {
             <View style={styles.homeProduct}>
               <View style={styles.homeHeading}>
                 <Text style={styles.bannerTitle}>Feature Product</Text>
-                <View style={styles.iconTitleHome}>
-                  <Icon name="angle-right" style={styles.iconbannerTitle} />
-                </View>
+                <Icon
+                  name="chevron-circle-right"
+                  style={styles.iconbannerTitle}
+                />
               </View>
               <ScrollView horizontal={true}>
                 <View style={styles.productTab}>
@@ -545,22 +543,6 @@ const styles = StyleSheet.create({
   iconBar: {
     color: '#00623B',
     fontSize: 30,
-  },
-  bellMess: {
-    position: 'relative',
-    flexDirection: 'row',
-  },
-  bellMessNumber: {
-    width: 23,
-    height: 23,
-    backgroundColor: 'red',
-    borderRadius: 100,
-    color: '#fff',
-    lineHeight: 20,
-    textAlign: 'center',
-    position: 'absolute',
-    right: -10,
-    top: -8,
   },
 });
 

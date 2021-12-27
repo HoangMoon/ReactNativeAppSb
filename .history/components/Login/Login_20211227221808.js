@@ -120,7 +120,7 @@ const Login = ({navigation}) => {
           </View>
           <Text style={styles.txtBtnLogin}>Facebook</Text>
         </View>
-        <View style={styles.btnLogin} backgroundColor="#ed213a">
+        <View style={styles.btnLogin} backgroundColor="#FC466B">
           <View style={styles.imgSocial}>
             <Image
               style={styles.imgSc}
@@ -130,11 +130,11 @@ const Login = ({navigation}) => {
           <Text style={styles.txtBtnLogin}>Google</Text>
         </View>
         <View style={styles.txtAcount}>
-          <Text style={styles.txtDon}>Bạn chưa có tài khoản?</Text>
+          <Text style={styles.txtDon}>Don’t have an account?</Text>
           <Text
             style={styles.txtSignup}
             onPress={() => navigation.navigate('Signup')}>
-            Đăng ký ngay
+            Sign Up
           </Text>
         </View>
       </ScrollView>

@@ -551,16 +551,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   bellMessNumber: {
-    width: 23,
-    height: 23,
+    width: 20,
+    height: 20,
     backgroundColor: 'red',
     borderRadius: 100,
-    color: '#fff',
-    lineHeight: 20,
-    textAlign: 'center',
-    position: 'absolute',
-    right: -10,
-    top: -8,
   },
 });
 

@@ -15,18 +15,16 @@ import Icon1 from 'react-native-vector-icons/MaterialCommunityIcons';
 const image = {
   uri: 'https://images.unsplash.com/photo-1589476993333-f55b84301219?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RhcmJ1Y2tzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
 };
-const Signup = ({navigation}) => {
+const Signup = () => {
   return (
     <>
       <ImageBackground
         source={image}
         resizeMode="cover"
         style={styles.imgBgSignup}>
-        <TouchableOpacity
-          style={styles.iconGoback}
-          onPress={() => navigation.goBack()}>
-          <Icon name="angle-left" style={{color: '#fff', fontSize: 18}} />
-        </TouchableOpacity>
+        <View>
+          <Icon name="angle-left" />
+        </View>
         <View style={styles.contentSingup}>
           <Image
             source={require('../../assets/images/logo.png')}
@@ -135,16 +133,6 @@ const styles = StyleSheet.create({
   txtBtn: {
     color: '#fff',
     fontSize: 18,
-  },
-  iconGoback: {
-    margin: 15,
-    width: 35,
-    height: 35,
-    backgroundColor: '#11998e',
-    borderRadius: 100,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 

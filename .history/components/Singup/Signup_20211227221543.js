@@ -25,7 +25,7 @@ const Signup = ({navigation}) => {
         <TouchableOpacity
           style={styles.iconGoback}
           onPress={() => navigation.goBack()}>
-          <Icon name="angle-left" style={{color: '#fff', fontSize: 18}} />
+          <Icon name="angle-left" style={{color: '#fff'}} />
         </TouchableOpacity>
         <View style={styles.contentSingup}>
           <Image

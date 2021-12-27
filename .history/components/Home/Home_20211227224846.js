@@ -559,7 +559,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     textAlign: 'center',
     position: 'absolute',
-    right: -10,
+    right: -15,
     top: -8,
   },
 });
