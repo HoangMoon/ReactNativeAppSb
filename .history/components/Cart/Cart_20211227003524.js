@@ -12,7 +12,7 @@ import {
 const {width} = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import FontIcon from 'react-native-vector-icons/FontAwesome';
-const Cart = ({navigation}) => {
+const Cart = () => {
   const [count, setCount] = useState(0);
   const handleCountMinus = e => {
     if (count > 0) {
@@ -27,11 +27,9 @@ const Cart = ({navigation}) => {
     <View>
       <ScrollView>
         <View style={Styles.Headers}>
-          <TouchableOpacity
-            style={Styles.backBtn}
-            onPress={() => navigation.goBack()}>
+          <View style={Styles.backBtn}>
             <Icon name="angle-left" style={Styles.Icon}></Icon>
-          </TouchableOpacity>
+          </View>
           <View style={Styles.userBtn}>
             <View>
               <FontIcon name="bookmark-o" style={Styles.IconBM}></FontIcon>
@@ -92,16 +90,16 @@ const Cart = ({navigation}) => {
         <View style={Styles.bottomAC}>
           <View style={{flexDirection: 'row'}}>
             <View>
-              <Text style={Styles.TotalText}>Tổng tiền:</Text>
+              <Text style={Styles.TotalText}>Total Price</Text>
             </View>
             <View>
-              <Text style={Styles.PriceTex}>50.000đ</Text>
+              <Text style={Styles.PriceTex}>19.99$</Text>
             </View>
           </View>
           <TouchableOpacity
             style={Styles.Odb}
             onPress={() => navigation.navigate('Cartu')}>
-            <Text style={Styles.Odbt}>Đặt hàng</Text>
+            <Text style={Styles.Odbt}>Order Now</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -120,11 +118,8 @@ const Styles = StyleSheet.create({
     width: 30,
     height: 30,
     justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
     marginLeft: 20,
-    backgroundColor: '#1d724d',
-    borderRadius: 100,
+    flexDirection: 'row',
   },
   userBtn: {
     justifyContent: 'center',
@@ -132,9 +127,10 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Icon: {
-    fontSize: 22,
+    fontSize: 30,
     alignItems: 'center',
     color: '#ccc',
+    marginRight: 20,
   },
   IcMark: {
     fontSize: 25,

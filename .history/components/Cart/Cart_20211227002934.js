@@ -12,7 +12,7 @@ import {
 const {width} = Dimensions.get('window');
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import FontIcon from 'react-native-vector-icons/FontAwesome';
-const Cart = ({navigation}) => {
+const Cart = () => {
   const [count, setCount] = useState(0);
   const handleCountMinus = e => {
     if (count > 0) {
@@ -27,11 +27,9 @@ const Cart = ({navigation}) => {
     <View>
       <ScrollView>
         <View style={Styles.Headers}>
-          <TouchableOpacity
-            style={Styles.backBtn}
-            onPress={() => navigation.goBack()}>
+          <View style={Styles.backBtn}>
             <Icon name="angle-left" style={Styles.Icon}></Icon>
-          </TouchableOpacity>
+          </View>
           <View style={Styles.userBtn}>
             <View>
               <FontIcon name="bookmark-o" style={Styles.IconBM}></FontIcon>
@@ -89,19 +87,94 @@ const Cart = ({navigation}) => {
           </View>
         </View>
 
+        <View style={Styles.item}>
+          <View style={Styles.Item}>
+            <View>
+              <Image
+                style={Styles.ItemImage}
+                source={require('../../assets/images/p16.png')}
+              />
+            </View>
+            <View>
+              <Text style={Styles.ItemTitle}>Caramel Frapuchino</Text>
+              <View style={Styles.Price}>
+                <View>
+                  <Text style={Styles.ItemTitle}> 50.000 đ </Text>
+                </View>
+                <TouchableOpacity style={Styles.del}>
+                  <FontIcon name="trash-o" style={Styles.IcMark}></FontIcon>
+                </TouchableOpacity>
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={Styles.add}>
+                  <TouchableOpacity
+                    style={Styles.actionAdd}
+                    onPress={e => handleCountMinus(e)}>
+                    <Icon style={Styles.iconAdd} name="minus" />
+                  </TouchableOpacity>
+                  <Text style={Styles.txtCount}>{count}</Text>
+                  <TouchableOpacity
+                    style={Styles.actionAdd}
+                    onPress={e => handleCountPlus(e)}>
+                    <Icon style={Styles.iconAdd} name="plus" />
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+
+        <View>
+          <View style={Styles.Item}>
+            <View>
+              <Image
+                style={Styles.ItemImage}
+                source={require('../../assets/images/p14.png')}
+              />
+            </View>
+
+            <View>
+              <Text style={Styles.ItemTitle}>Caramel Frapuchino</Text>
+              <View style={Styles.Price}>
+                <View>
+                  <Text style={Styles.ItemTitle}> 50.000 đ </Text>
+                </View>
+                <TouchableOpacity style={Styles.del}>
+                  <FontIcon name="trash-o" style={Styles.IcMark}></FontIcon>
+                </TouchableOpacity>
+              </View>
+              <View style={{flexDirection: 'row'}}>
+                <View style={Styles.add}>
+                  <TouchableOpacity
+                    style={Styles.actionAdd}
+                    onPress={e => handleCountMinus(e)}>
+                    <Icon style={Styles.iconAdd} name="minus" />
+                  </TouchableOpacity>
+                  <Text style={Styles.txtCount}>{count}</Text>
+                  <TouchableOpacity
+                    style={Styles.actionAdd}
+                    onPress={e => handleCountPlus(e)}>
+                    <Icon style={Styles.iconAdd} name="plus" />
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+
         <View style={Styles.bottomAC}>
           <View style={{flexDirection: 'row'}}>
             <View>
-              <Text style={Styles.TotalText}>Tổng tiền:</Text>
+              <Text style={Styles.TotalText}>Total Price</Text>
             </View>
             <View>
-              <Text style={Styles.PriceTex}>50.000đ</Text>
+              <Text style={Styles.PriceTex}>19.99$</Text>
             </View>
           </View>
           <TouchableOpacity
             style={Styles.Odb}
             onPress={() => navigation.navigate('Cartu')}>
-            <Text style={Styles.Odbt}>Đặt hàng</Text>
+            <Text style={Styles.Odbt}>Order Now</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -120,11 +193,8 @@ const Styles = StyleSheet.create({
     width: 30,
     height: 30,
     justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
     marginLeft: 20,
-    backgroundColor: '#1d724d',
-    borderRadius: 100,
+    flexDirection: 'row',
   },
   userBtn: {
     justifyContent: 'center',
@@ -132,9 +202,10 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Icon: {
-    fontSize: 22,
+    fontSize: 30,
     alignItems: 'center',
     color: '#ccc',
+    marginRight: 20,
   },
   IcMark: {
     fontSize: 25,
@@ -174,9 +245,9 @@ const Styles = StyleSheet.create({
     borderRadius: 40,
   },
   ItemImage: {
-    width: 150,
-    height: 120,
-    // resizeMode: 'cover',
+    width: 120,
+    height: 90,
+    // resizeMode: 'contain',
     borderRadius: 20,
   },
   ItemTitle: {

@@ -122,7 +122,7 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    marginLeft: 20,
+    marginLeft: 25,
     backgroundColor: '#1d724d',
     borderRadius: 100,
   },
@@ -132,7 +132,7 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
   },
   Icon: {
-    fontSize: 22,
+    fontSize: 25,
     alignItems: 'center',
     color: '#ccc',
   },
