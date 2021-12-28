@@ -17,9 +17,7 @@ import Icon2 from 'react-native-vector-icons/Ionicons';
 // import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 // const Tab = createMaterialTopTabNavigator();
 
-const imageBg = {
-  uri: 'https://images.unsplash.com/photo-1542181961-9590d0c79dab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0YXJidWNrc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-};
+const imageBg = require('../../../assets/images/profileb.jpg');
 
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 

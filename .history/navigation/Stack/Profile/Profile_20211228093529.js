@@ -18,7 +18,7 @@ import Icon2 from 'react-native-vector-icons/Ionicons';
 // const Tab = createMaterialTopTabNavigator();
 
 const imageBg = {
-  uri: 'https://images.unsplash.com/photo-1542181961-9590d0c79dab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0YXJidWNrc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+  uri: 'https://images.unsplash.com/photo-1603361513137-219be38712ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80',
 };
 
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';

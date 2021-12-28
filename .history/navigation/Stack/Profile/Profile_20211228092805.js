@@ -17,9 +17,7 @@ import Icon2 from 'react-native-vector-icons/Ionicons';
 // import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 // const Tab = createMaterialTopTabNavigator();
 
-const imageBg = {
-  uri: 'https://images.unsplash.com/photo-1542181961-9590d0c79dab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0YXJidWNrc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-};
+const imageBg = require('../../../assets/images/profileb.jpg');
 
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
@@ -125,22 +123,14 @@ function ProfileCart() {
           </View>
           <View style={styles.profileFuncList}>
             <View style={styles.FuncItem}>
-              <Icon
-                style={styles.FuncItemIcon}
-                name="money-check"
-                style={{color: '#5D26C1', fontSize: 22}}
-              />
+              <Icon style={styles.FuncItemIcon} name="money-check" />
               <Text style={styles.txtFuncItem}>Số dư tài khoản</Text>
             </View>
             <Icon style={styles.iconFunc} name="chevron-right" />
           </View>
           <View style={styles.profileFuncList}>
             <View style={styles.FuncItem}>
-              <Icon
-                style={styles.FuncItemIcon}
-                name="star"
-                style={{color: '#FF8C00', fontSize: 22}}
-              />
+              <Icon style={styles.FuncItemIcon} name="star" />
               <Text style={styles.txtFuncItem}>Đánh giá của tôi</Text>
             </View>
             <Icon style={styles.iconFunc} name="chevron-right" />
@@ -279,7 +269,7 @@ const styles = StyleSheet.create({
   },
   txtFollow: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 16,
   },
   //
   profileTitle: {

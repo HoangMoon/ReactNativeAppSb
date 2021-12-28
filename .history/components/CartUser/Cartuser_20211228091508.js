@@ -22,12 +22,12 @@ const Cartuser = ({navigation}) => {
   return (
     <>
       <ScrollView>
+        <TouchableOpacity
+          style={styles.iconGoback}
+          onPress={() => navigation.goBack()}>
+          <Icon name="angle-left" style={{color: '#fff', fontSize: 18}} />
+        </TouchableOpacity>
         <View>
-          <TouchableOpacity
-            style={styles.iconGoback}
-            onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" style={{color: '#fff', fontSize: 18}} />
-          </TouchableOpacity>
           <MapView
             style={styles.cartMaps}
             provider={PROVIDER_GOOGLE}

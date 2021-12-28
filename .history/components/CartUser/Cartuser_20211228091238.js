@@ -23,11 +23,6 @@ const Cartuser = ({navigation}) => {
     <>
       <ScrollView>
         <View>
-          <TouchableOpacity
-            style={styles.iconGoback}
-            onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" style={{color: '#fff', fontSize: 18}} />
-          </TouchableOpacity>
           <MapView
             style={styles.cartMaps}
             provider={PROVIDER_GOOGLE}
@@ -184,16 +179,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#DA4453',
     paddingHorizontal: 20,
     paddingVertical: 10,
-  },
-  iconGoback: {
-    margin: 15,
-    width: 35,
-    height: 35,
-    backgroundColor: '#11998e',
-    borderRadius: 100,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 

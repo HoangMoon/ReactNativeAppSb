@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  ScrollView,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, ScrollView, StyleSheet, Image} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon1 from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Cartuser = ({navigation}) => {
+const Cartuser = () => {
   const initialRegion = {
     latitude: 19.97819849719515,
     longitude: 105.65475851031482,
@@ -23,11 +16,6 @@ const Cartuser = ({navigation}) => {
     <>
       <ScrollView>
         <View>
-          <TouchableOpacity
-            style={styles.iconGoback}
-            onPress={() => navigation.goBack()}>
-            <Icon name="angle-left" style={{color: '#fff', fontSize: 18}} />
-          </TouchableOpacity>
           <MapView
             style={styles.cartMaps}
             provider={PROVIDER_GOOGLE}
@@ -81,16 +69,11 @@ const Cartuser = ({navigation}) => {
             <View>
               <Text style={styles.cartNumber}>Biển số xe: 36P4-4714</Text>
             </View>
-            <View style={styles.shipCart}>
+            <View>
               <View>
-                <Text style={styles.txtShipbig}>Đơn hàng giao: </Text>
-                <Text style={styles.txtShipsm}>3 sản phẩm</Text>
+                <Text>Đơn hàng giao: </Text>
+                <Text>3 sản phẩm</Text>
               </View>
-              <TouchableOpacity
-                style={styles.btnShipping}
-                onPress={() => navigation.navigate('Dely')}>
-                <Text style={{fontSize: 16, color: '#fff'}}>Xem chi tiết</Text>
-              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -163,37 +146,6 @@ const styles = StyleSheet.create({
   },
   cartNumber: {
     fontSize: 17,
-  },
-  shipCart: {
-    marginTop: 15,
-    marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  txtShipbig: {
-    fontSize: 18,
-    color: '#FF4B2B',
-  },
-  txtShipsm: {
-    marginTop: 3,
-    fontSize: 16,
-    color: '#F37335',
-  },
-  btnShipping: {
-    backgroundColor: '#DA4453',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
-  iconGoback: {
-    margin: 15,
-    width: 35,
-    height: 35,
-    backgroundColor: '#11998e',
-    borderRadius: 100,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 
