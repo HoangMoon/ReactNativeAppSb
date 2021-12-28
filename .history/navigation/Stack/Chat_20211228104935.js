@@ -89,7 +89,7 @@ const Chats = () => {
                 <View style={Styles.people}>
                   <View style={Styles.poepleImg}>
                     <View style={{position: 'relative'}}>
-                      <Octicons name="primitive-dot" style={Styles.active2} />
+                      <Octicons name="primitive-dot" style={Styles.active} />
                       <Image style={Styles.ItemImage} source={item.img} />
                     </View>
                   </View>
@@ -165,24 +165,17 @@ const Styles = StyleSheet.create({
     marginLeft: 15,
     backgroundColor: '#EBEFFE',
   },
-  Users: {
-    flexDirection: 'row',
-    marginBottom: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  Users: {flexDirection: 'row', marginBottom: 20},
   peoples: {marginLeft: 20},
-  poepleImg: {marginBottom: 10},
+  poepleImg: {marginLeft: 20, marginBottom: 10},
   ItemImage: {
     width: 60,
     height: 60,
     borderRadius: 50,
   },
-  Chatsroom: {marginLeft: 20, marginTop: 10},
   name: {
     color: 'black',
     fontSize: 16,
-    textAlign: 'center',
   },
   people: {flexDirection: 'row', marginBottom: 20},
   ChatName: {
@@ -206,14 +199,6 @@ const Styles = StyleSheet.create({
     fontSize: 30,
     bottom: -6,
     right: 4,
-    zIndex: 1,
-  },
-  active2: {
-    position: 'absolute',
-    color: 'green',
-    fontSize: 30,
-    bottom: -10,
-    right: -3,
     zIndex: 1,
   },
 });

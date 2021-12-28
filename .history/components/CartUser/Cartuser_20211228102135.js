@@ -14,10 +14,10 @@ import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Cartuser = ({navigation}) => {
   const initialRegion = {
-    latitude: 21.046643720630456,
-    longitude: 105.78502071401914,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421,
+    latitude: 19.97819849719515,
+    longitude: 105.65475851031482,
+    latitudeDelta: 0.09,
+    longitudeDelta: 0.04,
   };
   return (
     <>
@@ -114,7 +114,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 400,
     height: 450,
-    position: 'relative',
   },
   cartUser: {
     backgroundColor: '#fff',
@@ -204,8 +203,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
-    zIndex: 20,
   },
 });
 

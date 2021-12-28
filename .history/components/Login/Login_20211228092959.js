@@ -48,7 +48,7 @@ const Login = ({navigation}) => {
                 source={require('../../assets/images/handleImg.png')}
               />
             </Text>
-            <Text style={styles.txtWelcome}>Chào mừng bạn trở lại !</Text>
+            <Text style={styles.txtWelcome}>Chào mừng bạn trở lại</Text>
             <Text style={styles.txtDesc}>
               <Text style={styles.txtSta}>Starbucks</Text> Promotion
             </Text>

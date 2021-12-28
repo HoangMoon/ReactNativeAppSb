@@ -173,7 +173,7 @@ const Home = ({navigation}) => {
           <View style={styles.homeContent}>
             <View style={styles.bannerContent}>
               <View style={styles.homeHeading}>
-                <Text style={styles.bannerTitle}>Dành cho bạn</Text>
+                <Text style={styles.bannerTitle}>For you</Text>
                 <View style={styles.iconTitleHome}>
                   <Icon name="angle-right" style={styles.iconbannerTitle} />
                 </View>
