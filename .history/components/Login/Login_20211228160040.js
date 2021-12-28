@@ -77,7 +77,7 @@ const Login = ({navigation}) => {
               onChangeText={val => setPassword(val)}
               placeholder="Password"
               style={{width: '80%', fontSize: 20}}
-              secureTextEntry={isPasswordEyes}
+              secureTextEntry={true}
             />
             <TouchableOpacity
               onPress={() => {

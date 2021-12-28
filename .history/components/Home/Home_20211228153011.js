@@ -112,7 +112,7 @@ const Home = ({navigation}) => {
                     </View>
                     <TouchableOpacity
                       style={styles.modalBar}
-                      onPress={() => navigation.navigate('Login')}>
+                      onPress={() => navigation.naviagte('Login')}>
                       <Icon3 style={styles.iconBar} name="log-out" />
                       <Text style={styles.txtBar}>Đăng xuất</Text>
                     </TouchableOpacity>

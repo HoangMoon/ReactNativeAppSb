@@ -77,7 +77,7 @@ const Login = ({navigation}) => {
               onChangeText={val => setPassword(val)}
               placeholder="Password"
               style={{width: '80%', fontSize: 20}}
-              secureTextEntry={isPasswordEyes}
+              setPasswordEyes={isPasswordEyes}
             />
             <TouchableOpacity
               onPress={() => {
@@ -112,7 +112,7 @@ const Login = ({navigation}) => {
           <Text style={styles.txtLine}>Or</Text>
           <Image source={require('../../assets/images/Line.png')} />
         </View>
-        <View style={styles.btnLogin} backgroundColor="#0083B0">
+        <View style={styles.btnLogin} backgroundColor="#2193b0">
           <View style={styles.imgSocial}>
             <Image
               style={styles.imgSc}
@@ -128,7 +128,7 @@ const Login = ({navigation}) => {
               source={require('../../assets/images/gg.png')}
             />
           </View>
-          <Text style={styles.txtBtnLogin}>Đăng nhập google</Text>
+          <Text style={styles.txtBtnLogin}>Google</Text>
         </View>
         <View style={styles.txtAcount}>
           <Text style={styles.txtDon}>Bạn chưa có tài khoản?</Text>

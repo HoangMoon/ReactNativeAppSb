@@ -110,12 +110,10 @@ const Home = ({navigation}) => {
                       <Icon style={styles.iconBar} name="info-circle" />
                       <Text style={styles.txtBar}>Thông tin</Text>
                     </View>
-                    <TouchableOpacity
-                      style={styles.modalBar}
-                      onPress={() => navigation.navigate('Login')}>
+                    <View style={styles.modalBar}>
                       <Icon3 style={styles.iconBar} name="log-out" />
                       <Text style={styles.txtBar}>Đăng xuất</Text>
-                    </TouchableOpacity>
+                    </View>
                     <Pressable
                       style={[styles.btnModal, styles.buttonClose]}
                       onPress={() => setModalVisible(!modalVisible)}>
