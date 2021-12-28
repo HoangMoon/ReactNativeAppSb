@@ -37,7 +37,7 @@ const Cart = ({navigation}) => {
               <FontIcon name="bookmark-o" style={Styles.IconBM}></FontIcon>
             </View>
             <View>
-              <Text style={Styles.HeadersTex}>Xem danh mục</Text>
+              <Text style={Styles.HeadersTex}>Xem Bookmark</Text>
             </View>
           </View>
         </View>
@@ -49,7 +49,7 @@ const Cart = ({navigation}) => {
             alignItems: 'center',
           }}>
           <Text style={Styles.Title}>Giỏ hàng</Text>
-          <Text style={{fontSize: 17}}>3 sản phẩm</Text>
+          <Text>3 sản phẩm</Text>
         </View>
 
         <View style={Styles.item}>
@@ -158,12 +158,12 @@ const Cart = ({navigation}) => {
         </View>
 
         <View style={Styles.bottomAC}>
-          <View style={{flexDirection: 'row', marginHorizontal: 5}}>
+          <View style={{flexDirection: 'row'}}>
             <View>
               <Text style={Styles.TotalText}>Tổng tiền:</Text>
             </View>
             <View>
-              <Text style={Styles.PriceTex}>170.000đ</Text>
+              <Text style={Styles.PriceTex}>50.000đ</Text>
             </View>
           </View>
           <TouchableOpacity
@@ -241,7 +241,6 @@ const Styles = StyleSheet.create({
     marginHorizontal: 10,
     borderRadius: 40,
     marginBottom: 20,
-    paddingVertical: 10,
   },
   ItemImage: {
     width: 150,
@@ -250,8 +249,8 @@ const Styles = StyleSheet.create({
     borderRadius: 20,
   },
   ItemTitle: {
-    fontWeight: '600',
-    color: '#292E49',
+    fontWeight: '800',
+    color: '#555',
     fontSize: 18,
     marginBottom: 5,
   },
@@ -295,6 +294,7 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     marginBottom: 5,
+    marginLeft: 10,
   },
   PriceTex: {
     color: '#2e2e2e',

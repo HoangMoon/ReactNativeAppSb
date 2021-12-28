@@ -194,8 +194,7 @@ const Home = ({navigation}) => {
                     source={require('../../assets/images/bn2.png')}
                   />
                   <Text style={styles.txtInfo}>
-                    12th Dec 2021: Sale nhân dịp đón giáng sinh và chào năm mới
-                    2022
+                    12th Dec 2021: Pistachio Christmas Tree Frappuccino
                   </Text>
                 </View>
               </View>
@@ -425,7 +424,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     lineHeight: 25,
-    color: '#FF8008',
   },
   homeNews: {
     marginTop: 20,

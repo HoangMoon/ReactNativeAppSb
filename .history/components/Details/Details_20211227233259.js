@@ -11,7 +11,7 @@ import {
 import Swiper from 'react-native-swiper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const Details = ({route, params, navigation}) => {
+const Details = ({route, params, navigation, image, title, price}) => {
   const products = route.params;
   const [count, setCount] = useState(0);
   const handleCountMinus = e => {
@@ -114,7 +114,13 @@ const Details = ({route, params, navigation}) => {
               </View>
               <TouchableOpacity
                 style={styles.cartDetails}
-                onPress={() => navigation.navigate('Cart1')}>
+                onPress={() =>
+                  navigation.navigate('Cart1', {
+                    image,
+                    title,
+                    price,
+                  })
+                }>
                 <Icon style={styles.iconCart} name="cart-plus" />
               </TouchableOpacity>
             </View>

@@ -425,7 +425,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     lineHeight: 25,
-    color: '#FF8008',
   },
   homeNews: {
     marginTop: 20,

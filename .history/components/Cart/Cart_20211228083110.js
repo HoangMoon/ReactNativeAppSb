@@ -37,7 +37,7 @@ const Cart = ({navigation}) => {
               <FontIcon name="bookmark-o" style={Styles.IconBM}></FontIcon>
             </View>
             <View>
-              <Text style={Styles.HeadersTex}>Xem danh mục</Text>
+              <Text style={Styles.HeadersTex}>Xem Bookmark</Text>
             </View>
           </View>
         </View>
@@ -49,7 +49,7 @@ const Cart = ({navigation}) => {
             alignItems: 'center',
           }}>
           <Text style={Styles.Title}>Giỏ hàng</Text>
-          <Text style={{fontSize: 17}}>3 sản phẩm</Text>
+          <Text>3 sản phẩm</Text>
         </View>
 
         <View style={Styles.item}>
@@ -87,83 +87,15 @@ const Cart = ({navigation}) => {
               </View>
             </View>
           </View>
-          <View style={Styles.Item}>
-            <View>
-              <Image
-                style={Styles.ItemImage}
-                source={require('../../assets/images/p17.png')}
-              />
-            </View>
-            <View>
-              <Text style={Styles.ItemTitle}>Black Tea With Ruby</Text>
-              <View style={Styles.Price}>
-                <View>
-                  <Text style={Styles.ItemTitle}> 80.000đ </Text>
-                </View>
-                <TouchableOpacity style={Styles.del}>
-                  <FontIcon name="trash-o" style={Styles.IcMark}></FontIcon>
-                </TouchableOpacity>
-              </View>
-              <View style={{flexDirection: 'row'}}>
-                <View style={Styles.add}>
-                  <TouchableOpacity
-                    style={Styles.actionAdd}
-                    onPress={e => handleCountMinus(e)}>
-                    <Icon style={Styles.iconAdd} name="minus" />
-                  </TouchableOpacity>
-                  <Text style={Styles.txtCount}>{count}</Text>
-                  <TouchableOpacity
-                    style={Styles.actionAdd}
-                    onPress={e => handleCountPlus(e)}>
-                    <Icon style={Styles.iconAdd} name="plus" />
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </View>
-          </View>
-          <View style={Styles.Item}>
-            <View>
-              <Image
-                style={Styles.ItemImage}
-                source={require('../../assets/images/p9.png')}
-              />
-            </View>
-            <View>
-              <Text style={Styles.ItemTitle}>Figaro Panini</Text>
-              <View style={Styles.Price}>
-                <View>
-                  <Text style={Styles.ItemTitle}> 40.000đ </Text>
-                </View>
-                <TouchableOpacity style={Styles.del}>
-                  <FontIcon name="trash-o" style={Styles.IcMark}></FontIcon>
-                </TouchableOpacity>
-              </View>
-              <View style={{flexDirection: 'row'}}>
-                <View style={Styles.add}>
-                  <TouchableOpacity
-                    style={Styles.actionAdd}
-                    onPress={e => handleCountMinus(e)}>
-                    <Icon style={Styles.iconAdd} name="minus" />
-                  </TouchableOpacity>
-                  <Text style={Styles.txtCount}>{count}</Text>
-                  <TouchableOpacity
-                    style={Styles.actionAdd}
-                    onPress={e => handleCountPlus(e)}>
-                    <Icon style={Styles.iconAdd} name="plus" />
-                  </TouchableOpacity>
-                </View>
-              </View>
-            </View>
-          </View>
         </View>
 
         <View style={Styles.bottomAC}>
-          <View style={{flexDirection: 'row', marginHorizontal: 5}}>
+          <View style={{flexDirection: 'row'}}>
             <View>
               <Text style={Styles.TotalText}>Tổng tiền:</Text>
             </View>
             <View>
-              <Text style={Styles.PriceTex}>170.000đ</Text>
+              <Text style={Styles.PriceTex}>50.000đ</Text>
             </View>
           </View>
           <TouchableOpacity
@@ -237,11 +169,9 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#E7E9BB',
+    backgroundColor: '#EDEDED',
     marginHorizontal: 10,
     borderRadius: 40,
-    marginBottom: 20,
-    paddingVertical: 10,
   },
   ItemImage: {
     width: 150,
@@ -250,8 +180,8 @@ const Styles = StyleSheet.create({
     borderRadius: 20,
   },
   ItemTitle: {
-    fontWeight: '600',
-    color: '#292E49',
+    fontWeight: '800',
+    color: '#555',
     fontSize: 18,
     marginBottom: 5,
   },
@@ -295,6 +225,7 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     marginBottom: 5,
+    marginLeft: 10,
   },
   PriceTex: {
     color: '#2e2e2e',

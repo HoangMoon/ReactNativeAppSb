@@ -158,7 +158,7 @@ const Cart = ({navigation}) => {
         </View>
 
         <View style={Styles.bottomAC}>
-          <View style={{flexDirection: 'row', marginHorizontal: 5}}>
+          <View style={{flexDirection: 'row', marginHorizontal: 10}}>
             <View>
               <Text style={Styles.TotalText}>Tổng tiền:</Text>
             </View>

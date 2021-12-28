@@ -56,7 +56,7 @@ const Details = ({route, params, navigation}) => {
                   size={25}
                   color="#ccc"
                 />
-                <Text style={styles.ctPrice}>{products.price}.000đ</Text>
+                <Text style={styles.ctPrice}>{products.price}.000Vnđ</Text>
                 <Text style={styles.ctSale}>{products.salePrice}</Text>
               </View>
             </View>
@@ -114,7 +114,18 @@ const Details = ({route, params, navigation}) => {
               </View>
               <TouchableOpacity
                 style={styles.cartDetails}
-                onPress={() => navigation.navigate('Cart1')}>
+                onPress={() =>
+                  navigation.navigate('Cart1', {
+                    image,
+                    title,
+                    price,
+                    rating,
+                    salePrice,
+                    desc,
+                    name,
+                    desc,
+                  })
+                }>
                 <Icon style={styles.iconCart} name="cart-plus" />
               </TouchableOpacity>
             </View>

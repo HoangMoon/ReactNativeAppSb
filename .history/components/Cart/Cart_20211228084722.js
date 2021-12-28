@@ -158,7 +158,7 @@ const Cart = ({navigation}) => {
         </View>
 
         <View style={Styles.bottomAC}>
-          <View style={{flexDirection: 'row', marginHorizontal: 5}}>
+          <View style={{flexDirection: 'row'}}>
             <View>
               <Text style={Styles.TotalText}>Tổng tiền:</Text>
             </View>
@@ -295,6 +295,7 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 18,
     marginBottom: 5,
+    marginLeft: 10,
   },
   PriceTex: {
     color: '#2e2e2e',

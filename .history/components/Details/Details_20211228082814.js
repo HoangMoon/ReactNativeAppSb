@@ -11,7 +11,7 @@ import {
 import Swiper from 'react-native-swiper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const Details = ({route, params, navigation}) => {
+const Details = ({route, params, navigation, image, title, price}) => {
   const products = route.params;
   const [count, setCount] = useState(0);
   const handleCountMinus = e => {
