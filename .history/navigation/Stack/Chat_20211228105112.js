@@ -165,24 +165,17 @@ const Styles = StyleSheet.create({
     marginLeft: 15,
     backgroundColor: '#EBEFFE',
   },
-  Users: {
-    flexDirection: 'row',
-    marginBottom: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  Users: {flexDirection: 'row', marginBottom: 20},
   peoples: {marginLeft: 20},
-  poepleImg: {marginBottom: 10},
+  poepleImg: {marginLeft: 20, marginBottom: 10},
   ItemImage: {
     width: 60,
     height: 60,
     borderRadius: 50,
   },
-  Chatsroom: {marginLeft: 20, marginTop: 10},
   name: {
     color: 'black',
     fontSize: 16,
-    textAlign: 'center',
   },
   people: {flexDirection: 'row', marginBottom: 20},
   ChatName: {
@@ -213,7 +206,7 @@ const Styles = StyleSheet.create({
     color: 'green',
     fontSize: 30,
     bottom: -10,
-    right: -3,
+    right: 0,
     zIndex: 1,
   },
 });

@@ -114,7 +114,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 400,
     height: 450,
-    position: 'relative',
   },
   cartUser: {
     backgroundColor: '#fff',
@@ -204,8 +203,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
-    zIndex: 20,
   },
 });
 

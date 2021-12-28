@@ -178,7 +178,6 @@ const Styles = StyleSheet.create({
     height: 60,
     borderRadius: 50,
   },
-  Chatsroom: {marginLeft: 20, marginTop: 10},
   name: {
     color: 'black',
     fontSize: 16,

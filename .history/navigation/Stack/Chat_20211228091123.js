@@ -6,35 +6,34 @@ import {
   StyleSheet,
   TextInput,
   ScrollView,
-  TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Octicons from 'react-native-vector-icons/Octicons';
 const dataChat = [
   {
     id: 1,
-    img: require('../../assets/images/avatarb.jpg'),
-    name: 'Huy Hoàng',
+    img: require('../../assets/images/1.JPG'),
+    name: 'hoàng',
     Decrip: 'Hello StarBuck,I love u',
     time: '19:00',
   },
   {
     id: 2,
-    img: require('../../assets/images/a2.jpg'),
+    img: require('../../assets/images/MOON2.JPG'),
     name: 'moon',
-    Decrip: 'Đồ uống ngon lắm ,love u so ...',
+    Decrip: 'LoL',
     time: '19:30',
   },
   {
     id: 3,
-    img: require('../../assets/images/a3.jpg'),
-    name: 'Đức Hoàng',
-    Decrip: 'View quá đẹp ,đồ uống ngon',
+    img: require('../../assets/images/MOON3.JPG'),
+    name: ' hoàng',
+    Decrip: 'k',
     time: '19:00',
   },
   {
     id: 4,
-    img: require('../../assets/images/a4.jpg'),
+    img: require('../../assets/images/MOON4.JPG'),
     name: 'hoàng',
     Decrip: 'Hello StarBuck,I love u',
     time: '17:00',
@@ -44,11 +43,9 @@ const Chats = () => {
   return (
     <View>
       <View style={Styles.Headers}>
-        <TouchableOpacity
-          style={Styles.backBtn}
-          onPress={() => navigation.goBack()}>
+        <View style={Styles.backBtn}>
           <Icon name="angle-left" style={Styles.Icon}></Icon>
-        </TouchableOpacity>
+        </View>
         <View style={Styles.Title}>
           <Text style={Styles.TitleText}>Chats</Text>
         </View>
@@ -67,7 +64,7 @@ const Chats = () => {
               <React.Fragment key={index}>
                 <View style={Styles.peoples}>
                   <View style={Styles.poepleImg}>
-                    <View style={{position: 'relative', width: 70}}>
+                    <View style={{position: 'relative'}}>
                       <Octicons name="primitive-dot" style={Styles.active} />
                       <Image style={Styles.ItemImage} source={item.img} />
                     </View>
@@ -89,7 +86,7 @@ const Chats = () => {
                 <View style={Styles.people}>
                   <View style={Styles.poepleImg}>
                     <View style={{position: 'relative'}}>
-                      <Octicons name="primitive-dot" style={Styles.active2} />
+                      <Octicons name="primitive-dot" style={Styles.active} />
                       <Image style={Styles.ItemImage} source={item.img} />
                     </View>
                   </View>
@@ -124,12 +121,8 @@ const Styles = StyleSheet.create({
   backBtn: {
     width: 30,
     height: 30,
-    flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
     marginLeft: 20,
-    backgroundColor: '#11998e',
-    borderRadius: 100,
   },
   userBtn: {
     width: 30,
@@ -143,7 +136,7 @@ const Styles = StyleSheet.create({
     color: '#FF4D3D',
   },
   Icon: {
-    fontSize: 20,
+    fontSize: 30,
     alignItems: 'center',
     color: '#ccc',
   },
@@ -152,8 +145,7 @@ const Styles = StyleSheet.create({
     fontWeight: '800',
   },
   input: {
-    height: 50,
-    paddingHorizontal: 10,
+    height: 40,
     width: '93%',
     margin: 20,
     fontSize: 18,
@@ -165,24 +157,18 @@ const Styles = StyleSheet.create({
     marginLeft: 15,
     backgroundColor: '#EBEFFE',
   },
-  Users: {
-    flexDirection: 'row',
-    marginBottom: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  Users: {flexDirection: 'row', marginBottom: 20},
   peoples: {marginLeft: 20},
-  poepleImg: {marginBottom: 10},
+  poepleImg: {marginLeft: 20, marginBottom: 10},
   ItemImage: {
     width: 60,
     height: 60,
     borderRadius: 50,
   },
-  Chatsroom: {marginLeft: 20, marginTop: 10},
   name: {
     color: 'black',
     fontSize: 16,
-    textAlign: 'center',
+    marginLeft: 35,
   },
   people: {flexDirection: 'row', marginBottom: 20},
   ChatName: {
@@ -204,16 +190,8 @@ const Styles = StyleSheet.create({
     position: 'absolute',
     color: 'green',
     fontSize: 30,
-    bottom: -6,
-    right: 4,
-    zIndex: 1,
-  },
-  active2: {
-    position: 'absolute',
-    color: 'green',
-    fontSize: 30,
     bottom: -10,
-    right: -3,
+    right: 0,
     zIndex: 1,
   },
 });

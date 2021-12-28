@@ -172,13 +172,12 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
   },
   peoples: {marginLeft: 20},
-  poepleImg: {marginBottom: 10},
+  poepleImg: {marginLeft: 20, marginBottom: 10},
   ItemImage: {
     width: 60,
     height: 60,
     borderRadius: 50,
   },
-  Chatsroom: {marginLeft: 20, marginTop: 10},
   name: {
     color: 'black',
     fontSize: 16,

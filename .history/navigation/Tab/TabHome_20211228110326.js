@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 export default function HomeTab() {
   return (
     <Tab.Navigator
-      activeColor="#F53959"
+      activeColor="red"
       inactiveColor="#F53959"
       barStyle={{backgroundColor: 'red'}}
       screenOptions={{
