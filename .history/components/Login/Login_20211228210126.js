@@ -31,11 +31,9 @@ const Login = ({navigation}) => {
     if (email === 'hoang0508' && password === '123') {
       Alert.alert('Đăng nhập thành công!');
       navigation.navigate('HomeTab');
-    } else if (email === '' && password === '') {
-      // Alert('Đăng nhập tài khoản thất bại!');
-      Alert.alert('Bạn cần nhập thông tin vào ô trống!');
     } else {
-      Alert.alert('Bạn nhập sai email hoặc mật khẩu');
+      // Alert('Đăng nhập tài khoản thất bại!');
+      Alert.alert('Đăng nhập thất bại');
     }
   };
   return (
